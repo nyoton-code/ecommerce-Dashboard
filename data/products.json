@@ -1,0 +1,87 @@
+
+[
+  {
+    "id": 101,
+    "name": "MacBook Air M3",
+    "category": "Informatique",
+    "price": 14500,
+    "stock": 8
+  },
+  {
+    "id": 102,
+    "name": "Dell XPS 13",
+    "category": "Informatique",
+    "price": 13200,
+    "stock": 6
+  },
+  {
+    "id": 103,
+    "name": "Samsung Odyssey G5",
+    "category": "Informatique",
+    "price": 3200,
+    "stock": 12
+  },
+  {
+    "id": 104,
+    "name": "Logitech MX Master 3S",
+    "category": "Accessoires",
+    "price": 950,
+    "stock": 25
+  },
+  {
+    "id": 105,
+    "name": "Keychron K2 Keyboard",
+    "category": "Accessoires",
+    "price": 1100,
+    "stock": 18
+  },
+  {
+    "id": 106,
+    "name": "Anker USB-C Hub",
+    "category": "Accessoires",
+    "price": 450,
+    "stock": 35
+  },
+  {
+    "id": 107,
+    "name": "Sony WH-1000XM5",
+    "category": "Audio",
+    "price": 3900,
+    "stock": 10
+  },
+  {
+    "id": 108,
+    "name": "Apple AirPods Pro 2",
+    "category": "Audio",
+    "price": 2800,
+    "stock": 20
+  },
+  {
+    "id": 109,
+    "name": "JBL Flip 6",
+    "category": "Audio",
+    "price": 1400,
+    "stock": 16
+  },
+  {
+    "id": 110,
+    "name": "PlayStation 5 Slim",
+    "category": "Gaming",
+    "price": 6200,
+    "stock": 7
+  },
+  {
+    "id": 111,
+    "name": "Razer DeathAdder V3",
+    "category": "Gaming",
+    "price": 850,
+    "stock": 22
+  },
+  {
+    "id": 112,
+    "name": "Xbox Wireless Controller",
+    "category": "Gaming",
+    "price": 750,
+    "stock": 30
+  }
+]
