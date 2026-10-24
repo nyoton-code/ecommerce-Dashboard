@@ -2,49 +2,49 @@
 [
   {
     "id": 1,
-    "name": "Yassine El Amrani",
+    "name": "Yassine",
     "city": "Marrakech",
     "active": true
   },
   {
     "id": 2,
-    "name": "Salma Bennani",
+    "name": "Salma",
     "city": "Casablanca",
     "active": true
   },
   {
     "id": 3,
-    "name": "Omar Tazi",
+    "name": "Omar",
     "city": "Rabat",
     "active": true
   },
   {
     "id": 4,
-    "name": "Imane Alaoui",
+    "name": "Imane",
     "city": "Agadir",
     "active": true
   },
   {
     "id": 5,
-    "name": "Hamza Idrissi",
+    "name": "Hamza",
     "city": "Fes",
     "active": false
   },
   {
     "id": 6,
-    "name": "Nadia Rahmani",
+    "name": "Nadia",
     "city": "Marrakech",
     "active": true
   },
   {
     "id": 7,
-    "name": "Ayoub Chraibi",
+    "name": "Ayoub",
     "city": "Tanger",
     "active": true
   },
   {
     "id": 8,
-    "name": "Lina Berrada",
+    "name": "Lina",
     "city": "Meknes",
     "active": false
   }

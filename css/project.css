@@ -607,7 +607,6 @@ select {
     color: #fff;
 }
 
-/* FOOTER */
 
 .dashboard-footer {
     display: flex;
@@ -623,7 +622,6 @@ select {
     margin: 0;
 }
 
-/* RESPONSIVE */
 
 @media (max-width: 991px) {
     .dashboard-container {

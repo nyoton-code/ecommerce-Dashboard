@@ -16,21 +16,21 @@
   },
   {
     "id": 103,
-    "name": "Samsung Odyssey G5",
+    "name": "iphone 17 pro",
     "category": "Informatique",
-    "price": 3200,
+    "price": 11200,
     "stock": 12
   },
   {
     "id": 104,
-    "name": "Logitech MX Master 3S",
+    "name": "Meta glasses",
     "category": "Accessoires",
-    "price": 950,
+    "price": 4500,
     "stock": 25
   },
   {
     "id": 105,
-    "name": "Keychron K2 Keyboard",
+    "name": "K2 Keyboard",
     "category": "Accessoires",
     "price": 1100,
     "stock": 18
