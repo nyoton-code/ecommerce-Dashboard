@@ -15,7 +15,6 @@
     />
     <link rel="stylesheet" href="css/project.css" />
   </head>
-
   <body>
     <header class="dashboard-header">
       <div class="container-fluid dashboard-container">
@@ -24,23 +23,12 @@
             <div class="brand-icon">
               <i class="fa-solid fa-bag-shopping"></i>
             </div>
-
             <div class="brand-text">
               <h1>OrderFlow<span>.</span></h1>
               <p>Management Dashboard</p>
             </div>
           </div>
-
           <div class="header-actions">
-            <button
-              class="icon-button"
-              type="button"
-              aria-label="Toggle theme"
-              id="themeToggle"
-            >
-              <i class="fa-regular fa-moon"></i>
-            </button>
-
             <div class="header-avatar">AD</div>
           </div>
         </div>
@@ -54,90 +42,70 @@
           <h2>Dashboard Overview</h2>
           <p>Welcome back! Here's what's happening with your store.</p>
         </div>
-
         <div class="overview-tag">
           <i class="fa-solid fa-chart-simple"></i>
           Overview
         </div>
       </section>
 
-      <!-- ERROR MESSAGE -->
+      <!-- ERROR MESSAGE: shown by view.js if loading fails -->
       <div
         id="errorMessage"
         class="alert alert-danger d-none"
         role="alert"
       ></div>
 
-      <!-- STATISTICS -->
-      <section class="stats-section">
+      <!-- DYNAMIC STATISTICS -->
+      <section class="stats-section" aria-label="Dashboard statistics">
         <div class="row g-4">
-          <!-- CUSTOMERS -->
           <div class="col-12 col-md-6">
             <div class="stat-card">
               <div class="stat-top">
-                <div class="stat-icon">
-                  <i class="fa-solid fa-users"></i>
-                </div>
-
-                <span class="stat-label"> Total Customers </span>
+                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                <span class="stat-label">Total Customers</span>
               </div>
-
               <div class="stat-bottom">
-                <h3 id="totalCustomers">8</h3>
+                <h3 id="totalCustomers">—</h3>
                 <p>Registered customers</p>
               </div>
             </div>
           </div>
-
-          <!-- PRODUCTS -->
           <div class="col-12 col-md-6">
             <div class="stat-card">
               <div class="stat-top">
                 <div class="stat-icon">
                   <i class="fa-solid fa-box-open"></i>
                 </div>
-
-                <span class="stat-label"> Total Products </span>
+                <span class="stat-label">Total Products</span>
               </div>
-
               <div class="stat-bottom">
-                <h3 id="totalProducts">12</h3>
+                <h3 id="totalProducts">—</h3>
                 <p>Available in catalog</p>
               </div>
             </div>
           </div>
-
-          <!-- ORDERS -->
           <div class="col-12 col-md-6">
             <div class="stat-card">
               <div class="stat-top">
                 <div class="stat-icon">
                   <i class="fa-solid fa-cart-shopping"></i>
                 </div>
-
-                <span class="stat-label"> Total Orders </span>
+                <span class="stat-label">Total Orders</span>
               </div>
-
               <div class="stat-bottom">
-                <h3 id="totalOrders">15</h3>
+                <h3 id="totalOrders">—</h3>
                 <p>Orders recorded</p>
               </div>
             </div>
           </div>
-
-          <!-- ORDER VALUE -->
           <div class="col-12 col-md-6">
             <div class="stat-card">
               <div class="stat-top">
-                <div class="stat-icon">
-                  <i class="fa-solid fa-wallet"></i>
-                </div>
-
-                <span class="stat-label"> Total Order Value </span>
+                <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+                <span class="stat-label">Total Order Value</span>
               </div>
-
               <div class="stat-bottom">
-                <h3 id="totalRevenue">-- MAD</h3>
+                <h3 id="totalRevenue">—</h3>
                 <p>Combined order value</p>
               </div>
             </div>
@@ -152,21 +120,18 @@
             <h3>Recent Orders</h3>
             <p>View and manage your customer orders.</p>
           </div>
-
           <div class="order-count">
             <i class="fa-solid fa-list"></i>
-            <span id="ordersCount">15 Orders</span>
+            <span id="ordersCount">Loading orders...</span>
           </div>
         </div>
 
-        <!-- FILTERS -->
+        <!-- FILTERS: app.js reads these IDs -->
         <div class="filters-container">
           <div class="row g-3 align-items-center">
-            <!-- SEARCH -->
             <div class="col-12 col-lg-6">
               <div class="search-wrapper">
                 <i class="fa-solid fa-magnifying-glass"></i>
-
                 <input
                   type="search"
                   id="searchInput"
@@ -176,8 +141,6 @@
                 />
               </div>
             </div>
-
-            <!-- STATUS FILTER -->
             <div class="col-12 col-sm-6 col-lg-3">
               <select
                 id="statusFilter"
@@ -190,8 +153,6 @@
                 <option value="Annulee">Cancelled</option>
               </select>
             </div>
-
-            <!-- CATEGORY FILTER -->
             <div class="col-12 col-sm-6 col-lg-3">
               <select
                 id="categoryFilter"
@@ -208,160 +169,33 @@
           </div>
         </div>
 
-        <!-- TABLE -->
+        <!-- TABLE: view.js creates rows inside the tbody -->
         <div class="table-responsive">
           <table class="table orders-table align-middle">
             <thead>
               <tr>
-                <th>ORDER ID</th>
-                <th>CUSTOMER</th>
-                <th>DATE</th>
-                <th>AMOUNT</th>
-                <th>STATUS</th>
-                <th class="text-end">ACTION</th>
+                <th scope="col">ORDER ID</th>
+                <th scope="col">CUSTOMER</th>
+                <th scope="col">DATE</th>
+                <th scope="col">AMOUNT</th>
+                <th scope="col">STATUS</th>
+                <th scope="col" class="text-end">ACTION</th>
               </tr>
             </thead>
-
             <tbody id="ordersTableBody">
-              <!-- STATIC EXAMPLE ROW -->
               <tr>
-                <td>
-                  <span class="order-id">#1001</span>
-                </td>
-
-                <td>
-                  <div class="customer-cell">
-                    <div class="customer-avatar">YE</div>
-                    <div class="customer-info">
-                      <strong>Yassine El Amrani</strong>
-                      <small>Marrakech</small>
-                    </div>
-                  </div>
-                </td>
-
-                <td>Oct 01, 2026</td>
-
-                <td>
-                  <span class="amount"> 16,350 MAD </span>
-                </td>
-
-                <td>
-                  <span class="status-badge delivered">
-                    <span class="status-dot"></span>
-                    Delivered
-                  </span>
-                </td>
-
-                <td class="text-end">
-                  <button
-                    type="button"
-                    class="view-button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderDetailsModal"
-                  >
-                    <i class="fa-regular fa-eye"></i>
-                    View
-                  </button>
-                </td>
-              </tr>
-
-              <!-- EXAMPLE ROW 2 -->
-              <tr>
-                <td>
-                  <span class="order-id">#1003</span>
-                </td>
-
-                <td>
-                  <div class="customer-cell">
-                    <div class="customer-avatar">OT</div>
-                    <div class="customer-info">
-                      <strong>Omar Tazi</strong>
-                      <small>Rabat</small>
-                    </div>
-                  </div>
-                </td>
-
-                <td>Oct 03, 2026</td>
-
-                <td>
-                  <span class="amount">7,700 MAD</span>
-                </td>
-
-                <td>
-                  <span class="status-badge pending">
-                    <span class="status-dot"></span>
-                    Pending
-                  </span>
-                </td>
-
-                <td class="text-end">
-                  <button
-                    type="button"
-                    class="view-button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderDetailsModal"
-                  >
-                    <i class="fa-regular fa-eye"></i>
-                    View
-                  </button>
-                </td>
-              </tr>
-
-              <!-- EXAMPLE ROW 3 -->
-              <tr>
-                <td>
-                  <span class="order-id">#1005</span>
-                </td>
-
-                <td>
-                  <div class="customer-cell">
-                    <div class="customer-avatar">HI</div>
-                    <div class="customer-info">
-                      <strong>Hamza Idrissi</strong>
-                      <small>Fes</small>
-                    </div>
-                  </div>
-                </td>
-
-                <td>Oct 05, 2026</td>
-
-                <td>
-                  <span class="amount">3,900 MAD</span>
-                </td>
-
-                <td>
-                  <span class="status-badge cancelled">
-                    <span class="status-dot"></span>
-                    Cancelled
-                  </span>
-                </td>
-
-                <td class="text-end">
-                  <button
-                    type="button"
-                    class="view-button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#orderDetailsModal"
-                  >
-                    <i class="fa-regular fa-eye"></i>
-                    View
-                  </button>
-                </td>
+                <td colspan="6" class="text-center py-5">Loading orders...</td>
               </tr>
             </tbody>
           </table>
         </div>
-
-        <!-- TABLE FOOTER -->
         <div class="orders-footer">
-          <span id="tableInfo"> Showing 3 example orders </span>
+          <span id="tableInfo">Loading orders...</span>
         </div>
       </section>
-
-      <!-- FOOTER -->
     </main>
 
-    <!-- ORDER DETAILS MODAL -->
+    <!-- ORDER DETAILS MODAL: view.js inserts the selected order -->
     <div
       class="modal fade"
       id="orderDetailsModal"
@@ -373,10 +207,9 @@
         <div class="modal-content order-modal">
           <div class="modal-header">
             <div>
-              <span class="modal-eyebrow"> ORDER INFORMATION </span>
-              <h5 class="modal-title" id="orderDetailsTitle">Order #1001</h5>
+              <span class="modal-eyebrow">ORDER INFORMATION</span>
+              <h5 class="modal-title" id="orderDetailsTitle">Order details</h5>
             </div>
-
             <button
               type="button"
               class="btn-close"
@@ -384,76 +217,9 @@
               aria-label="Close"
             ></button>
           </div>
-
           <div class="modal-body" id="orderDetailsBody">
-            <!-- CUSTOMER DETAILS -->
-            <div class="modal-info-grid">
-              <div class="info-item">
-                <span>Customer</span>
-                <strong>Yassine El Amrani</strong>
-              </div>
-
-              <div class="info-item">
-                <span>City</span>
-                <strong>Marrakech</strong>
-              </div>
-
-              <div class="info-item">
-                <span>Order Date</span>
-                <strong>Oct 01, 2026</strong>
-              </div>
-
-              <div class="info-item">
-                <span>Status</span>
-                <span class="status-badge delivered"> Delivered </span>
-              </div>
-            </div>
-
-            <!-- PRODUCTS -->
-            <h6 class="modal-section-title">Ordered Products</h6>
-
-            <div class="table-responsive">
-              <table class="table modal-products-table">
-                <thead>
-                  <tr>
-                    <th>Product</th>
-                    <th>Price</th>
-                    <th>Qty</th>
-                    <th class="text-end">Subtotal</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>MacBook Air M3</td>
-                    <td>14,500 MAD</td>
-                    <td>1</td>
-                    <td class="text-end">14,500 MAD</td>
-                  </tr>
-
-                  <tr>
-                    <td>Logitech MX Master 3S</td>
-                    <td>950 MAD</td>
-                    <td>1</td>
-                    <td class="text-end">950 MAD</td>
-                  </tr>
-
-                  <tr>
-                    <td>Anker USB-C Hub</td>
-                    <td>450 MAD</td>
-                    <td>2</td>
-                    <td class="text-end">900 MAD</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="modal-total">
-              <span>Order Total</span>
-              <strong>16,350 MAD</strong>
-            </div>
+            <!-- Dynamic content is generated by renderOrderDetails() -->
           </div>
-
           <div class="modal-footer">
             <button
               type="button"
@@ -467,10 +233,7 @@
       </div>
     </div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Application JS -->
-    <script type="module" src="javascript/app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

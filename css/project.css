@@ -48,7 +48,6 @@ select {
     padding-right: 44px;
 }
 
-/* HEADER */
 
 .dashboard-header {
     background: var(--surface);
@@ -141,7 +140,6 @@ select {
     font-weight: 700;
 }
 
-/* PAGE HEADING */
 
 .page-heading {
     padding: 48px 0 36px;
@@ -195,7 +193,6 @@ select {
     font-weight: 700;
 }
 
-/* STATISTICS */
 
 .stats-section {
     margin-bottom: 36px;
@@ -256,7 +253,7 @@ select {
     font-size: 14px;
 }
 
-/* ORDERS SECTION */
+
 
 .orders-section {
     background: var(--surface);
@@ -300,7 +297,6 @@ select {
     margin-right: 8px;
 }
 
-/* FILTERS */
 
 .filters-container {
     padding: 0 34px 30px;
@@ -346,7 +342,6 @@ select {
     padding-left: 17px;
 }
 
-/* TABLE */
 
 .orders-table {
     margin: 0;
@@ -432,7 +427,6 @@ select {
     white-space: nowrap;
 }
 
-/* STATUS */
 
 .status-badge {
     display: inline-flex;
@@ -467,7 +461,6 @@ select {
     color: var(--danger);
 }
 
-/* BUTTONS */
 
 .view-button {
     display: inline-flex;
@@ -491,7 +484,6 @@ select {
     color: #fff;
 }
 
-/* TABLE FOOTER */
 
 .orders-footer {
     padding: 24px 34px;
@@ -499,7 +491,7 @@ select {
     font-size: 14px;
 }
 
-/* MODAL */
+
 
 .order-modal {
     border: 0;
